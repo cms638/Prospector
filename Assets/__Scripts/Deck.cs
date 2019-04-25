@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 public class Deck : MonoBehaviour {
 
-[Header("Set in Inspector")]
+    [Header("Set in Inspector")]
+    public bool startFaceUp = false;
 	//Suits
 	public Sprite suitClub;
 	public Sprite suitDiamond;
@@ -267,6 +268,7 @@ public class Deck : MonoBehaviour {
 	 	List<Card> tCards = new List<Card>();
 
 	 	int ndx;   // which card to move
+        tCards = new List<Card>();
 
 	 	while (oCards.Count > 0) 
 	 	{
