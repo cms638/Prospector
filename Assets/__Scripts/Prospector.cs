@@ -13,7 +13,7 @@ public class Prospector : MonoBehaviour {
 	public TextAsset			deckXML;
     public TextAsset            layoutXML;
     public float xOffset = 3;
-    public float yOffset = -2.5;
+    public float yOffset = -2.5f;
     public Vector3 layoutCenter3;
 
 	[Header("Set Dynamically")]
@@ -41,19 +41,19 @@ public class Prospector : MonoBehaviour {
         // }
         layout = GetComponent<Layout>();
         layout.ReadLayout(layoutXML.text);
-        drawPile = ConvertListCardsToListCardProspectors(deck.cards);
+        //drawPile = ConvertListCardsToListCardProspectors(deck.cards);
         LayoutGame();
 	}
 
-    List<CardProspector> ConvertListCardsToListCardProspectors(List<Card> 1CD) {
-        List<CardProspector> 1CP = new List<CardProspector>();
-        CardProspector tCP;
-    foreach(Card tCD in 1CD) {
-       tCP = tCD as CardProspector;
-        1CP.Add(tCP);
-    }
-        return(1CP); 
-        }
+    //List<CardProspector> ConvertListCardsToListCardProspectors(List<Card> 1CD) {
+        //List<CardProspector> 1CP = new List<CardProspector>();
+        //CardProspector tCP;
+    //foreach(Card tCD in 1CD) {
+      // tCP = tCD as CardProspector;
+       // 1CP.Add(tCP);
+    //}
+        //return(1CP); 
+        //}
 
     CardProspector Draw() {
         CardProspector cd = drawPile[0];
