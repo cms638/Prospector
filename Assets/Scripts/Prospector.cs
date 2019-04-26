@@ -494,7 +494,7 @@ public class Prospector : MonoBehaviour
 			//If it's a win, add the score to the next round. static fields are NOT reset by reloading the level
 			Prospector.SCORE_FROM_PREVIOUS_ROUND = score;
 			//print("You won this round! Round score: " + score);
-			GTRoundResult.text = "You won this round! Play another to add to your score!\nRound Score: " + score;
+			GTRoundResult.text = "You won!\nRound Score: " + score;
 			ShowResultsGTs(true);
 			break;
 		case ScoreEvent.gameLoss:
@@ -503,7 +503,7 @@ public class Prospector : MonoBehaviour
 			if (Prospector.HIGH_SCORE <= score)
 			{
 				//print("You got the high score! High score: " + score);
-				string sRR = "You got the high score!\nHigh score: " + score;
+				string sRR = "High score!\nHigh score: " + score;
 				GTRoundResult.text = sRR;
 				Prospector.HIGH_SCORE = score;
 				PlayerPrefs.SetInt("ProspectorHighScore", score);
